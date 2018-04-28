@@ -16,9 +16,39 @@
 
 /*!
  创建生成保存数据查询条件
+ 
+ kSecClass：条目类别
+ 
+ kSecAttrGeneric：条目id
+ 
+ kSecAttrService：条目所属服务
+ 
+ kSecAttrAccount：条目所属账户名
+ 
+ 其中kSecAttrService和kSecAttrAccount在整个keychain里必须唯一，不能重名。
+ 
  */
 +(NSMutableDictionary*) keyChainIdentifier:(NSString*)identifier {
-    NSMutableDictionary * keyChainMutableDictionary = [NSMutableDictionary dictionaryWithObjectsAndKeys:(id)kSecClassGenericPassword,kSecClass,identifier,kSecAttrService,identifier,kSecAttrAccount,kSecAttrAccessibleAfterFirstUnlock,kSecAttrAccessible, nil];
+    NSMutableDictionary *keyChainMutableDictionary = [NSMutableDictionary dictionary];
+                                                                                                                                                                                                                                                                                                    
+    //设置条目类别，我们用该条目存储普通密码，所以设置成kSecClassGenericPassword
+    [keyChainMutableDictionary setObject:(id)kSecClassGenericPassword forKey:(id)kSecClass];
+
+    //设置条目的id，比如“MyPasswordForFtp",条目id必须时NSDate，而不是NSString
+//    NSData *itemID= [identifier dataUsingEncoding:NSUTF8StringEncoding];
+//    [keyChainMutableDictionary setObject:itemID forKey:(id)kSecAttrGeneric];
+
+    //设置条目所属的服务和账户，为了避免重名，我们使用常见的反转域名规则，比如com.mykeychain.ftppassword
+    [keyChainMutableDictionary setObject:identifier forKey:(id)kSecAttrAccount];
+    [keyChainMutableDictionary setObject:identifier forKey:(id)kSecAttrService];
+    [keyChainMutableDictionary setObject:(id)kSecAttrAccessibleAfterFirstUnlock forKey:(id)kSecAttrAccessible];
+
+    //设置查询条件，只返回一个条目
+//    [keyChainMutableDictionary setObject:(id)kSecMatchLimitOne forKey:(id)kSecMatchLimit];
+
+    //设置查询条件，返回条目存储的数据 （kSecReturnData == True）
+//    [keyChainMutableDictionary setObject:(id)kCFBooleanTrue forKey:(id)kSecReturnData];
+    
     return keyChainMutableDictionary;
 }
 

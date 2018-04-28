@@ -21,13 +21,13 @@
     [super viewDidLoad];
     
 
-//    [self saveData];
+    [self saveData];
     
     [self getData];
     
-//    [self updateData];
+    [self updateData];
     
-//    [self deleteData];
+    [self deleteData];
 
 }
 
