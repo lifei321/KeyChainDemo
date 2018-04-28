@@ -15,6 +15,7 @@
 		0BD7C29A20945E9C0058A5D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD7C29920945E9C0058A5D1 /* main.m */; };
 		0BD7C2A420945E9D0058A5D1 /* KeychainDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD7C2A320945E9D0058A5D1 /* KeychainDemoTests.m */; };
 		0BD7C2AF20945E9D0058A5D1 /* KeychainDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD7C2AE20945E9D0058A5D1 /* KeychainDemoUITests.m */; };
+		0BD7C2BE20945EF10058A5D1 /* KeychainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD7C2BD20945EF10058A5D1 /* KeychainManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		0BD7C2AA20945E9D0058A5D1 /* KeychainDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeychainDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BD7C2AE20945E9D0058A5D1 /* KeychainDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeychainDemoUITests.m; sourceTree = "<group>"; };
 		0BD7C2B020945E9D0058A5D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BD7C2BC20945EF10058A5D1 /* KeychainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeychainManager.h; sourceTree = "<group>"; };
+		0BD7C2BD20945EF10058A5D1 /* KeychainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeychainManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				0BD7C29520945E9C0058A5D1 /* LaunchScreen.storyboard */,
 				0BD7C29820945E9C0058A5D1 /* Info.plist */,
 				0BD7C29920945E9C0058A5D1 /* main.m */,
+				0BD7C2BC20945EF10058A5D1 /* KeychainManager.h */,
+				0BD7C2BD20945EF10058A5D1 /* KeychainManager.m */,
 			);
 			path = KeychainDemo;
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 				0BD7C28F20945E9C0058A5D1 /* ViewController.m in Sources */,
 				0BD7C29A20945E9C0058A5D1 /* main.m in Sources */,
 				0BD7C28C20945E9C0058A5D1 /* AppDelegate.m in Sources */,
+				0BD7C2BE20945EF10058A5D1 /* KeychainManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
